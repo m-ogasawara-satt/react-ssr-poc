@@ -1,0 +1,1 @@
+(()=>{var r={252:r=>{"use strict";r.exports=require("express")}},e={};function t(o){var s=e[o];if(void 0!==s)return s.exports;var n=e[o]={exports:{}};return r[o](n,n.exports,t),n.exports}(()=>{const r=t(252)();r.get("/",((r,e)=>{e.send("<h1>Hello world</h1>")})),r.listen(9001,(()=>{console.log("Server is running at http://localhost:".concat(9001))}))})()})();
