@@ -8,7 +8,18 @@ const app = express();
 const port = 9000;
 
 app.get('/', (req, res) => {
-  const html = ReactDOMServer.renderToString(<App />);
+  const appHtml = ReactDOMServer.renderToString(<App />);
+  const html = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>My App</title>
+      </head>
+      <body>
+        <div id="root">${appHtml}</div>
+      </body>
+    </html>
+  `;
   res.send(html);
 });
 
